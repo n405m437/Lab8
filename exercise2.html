@@ -13,15 +13,16 @@
 		images[2] = "Images/image3.png";
 		images[3] = "Images/image4.png";
 		images[4] = "Images/image5.png";
-		var max = images.length();
-		var current = 1;
+		var max = 4;
+		var current = 0;
 		var image = document.getElementById("myImgId");
 
 		function next() {
 			var image = document.getElementById("myImgId");
 			if(current == max) {
-				current = 1;
-				image.src = images[current];
+
+				current = 0;
+				image.src = images[0];
 			}
 			else
 			{
@@ -30,6 +31,17 @@
 			}
 		}
 		function back() {
+			var image = document.getElementById("myImgId");
+			if(current == 0) {
+
+				current = 4;
+				image.src = images[4];
+			}
+			else
+			{
+				current -=1;
+				image.src = images[current];
+			}
 
 		}
 	</script>
@@ -37,5 +49,5 @@
 		<br>
 		<button  id="next" onclick="next()" style="background-color: white;border-color: black;color: black">next</button>
 		<button  id="previous" onclick="back()" style="background-color: white;border-color: black;color: black">previous</button>
-	
+
 </html>
