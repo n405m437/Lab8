@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Password verifier</title>
+	</head>
+	<button type="button"id="Validate" onclick="Validate()" style="background-color: white;border-color: black;color: black">Validate</button>
+	<script>
+
+		var input1 = prompt("Please enter your password here.");
+		var input2 = prompt("please reenter your password for verifaction");
+		
+		function Validate() {
+			if(input1.length <8)
+		{
+			alert("Invalid password length please refresh the page.");
+		}
+		else if(input1 != input2)
+		{
+			alert("Passwords do not match please refresh the page and try again.");
+		}
+		else{
+			alert("Passwords match and are of required length");
+		}
+		}
+	</script>
