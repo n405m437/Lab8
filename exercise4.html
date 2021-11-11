@@ -5,13 +5,13 @@
     <title>Dummy paragraph</title>
   </head>
   <body>
-    <p id="dummyparagraph" style="background-color:grey">A simple experiement in the webpage.</p>
-	<p>Border,width values are thick thin,medium</p>
+    <p id="dummyparagraph" style="border: 24px" >A simple experiement in the webpage.</p>
+	<p>Border, width values are thick thin,medium</p>
     <input type="text" id="redborder" value="red value from 0-255">
 	<br>
     <input type="text" id="blueborder" value="blue value from 0-255">
 	<br>
-    <input type="text" id="greenborder" value="red value from 0-255">
+    <input type="text" id="greenborder" value="green value from 0-255">
 	<br>
     <input type="text" id="widthborder" value="width value">
 	<p>Background</p>
@@ -27,8 +27,9 @@
   </body>
   <script>
 	function change() {
-console.log("working");
+	console.log("working");
 	var redborder = document.getElementById("redborder").value;
+	console.log (redborder);
 	var blueborder = document.getElementById("blueborder").value;
 	var greenborder = document.getElementById("greenborder").value;
 	var width = document.getElementById("widthborder").value;
@@ -36,9 +37,10 @@ console.log("working");
 	var bluebackground = document.getElementById("bluebackground").value;
 	var greenbackground = document.getElementById("greenbackground").value;
 	var dummyparagraph = document.getElementById("dummyparagraph");
-	dummyparagraph.style.borderColor = "rgb("+redborder+","+blueborder+","+greenborder+")";
+	dummyparagraph.style.borderStyle = "solid";
+	dummyparagraph.style.borderColor = "rgb(" + redborder + "," + blueborder + ","+ greenborder + ")";
 	dummyparagraph.style.borderWidth = width;
-	dummyparagraph.style.backgroundColor = "rgb("+redbackground + "," + bluebackground + "," + greenbackground+")";
+	dummyparagraph.style.backgroundColor = "rgb(" + redbackground + "," + bluebackground + ","+ greenbackground + ")";
 	}
   </script>
 </html>
