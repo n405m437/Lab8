@@ -4,13 +4,22 @@
 		<meta charset="utf-8">
 		<title> Password verifier</title>
 	</head>
-	<button type="button"id="Validate" onclick="Validate()" style="background-color: white;border-color: black;color: black">Validate</button>
+	<body>
+		<label for ="pwd">password:</label>
+		<input type = "password" id ="pwd" name="pwd">
+		<br>
+		<label for ="confirm">Confirm</label>
+		<input type ="password" id="confirm" name = "confirm">
+		<br>
+		<button type="button" onclick="Validate()">Validate</button>
+	</body>
 	<script>
 
-		var input1 = prompt("Please enter your password here.");
-		var input2 = prompt("please reenter your password for verifaction");
+		
 		
 		function Validate() {
+		var input1 = document.getElementById("pwd").value;
+		var input2 = document.getElementById("confirm").value;
 			if(input1.length <8)
 		{
 			alert("Invalid password length please refresh the page.");
